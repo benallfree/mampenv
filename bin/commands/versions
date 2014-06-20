@@ -1,0 +1,2 @@
+#!/bin/sh
+ls "/Applications/MAMP/bin/php/"

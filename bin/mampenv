@@ -3,5 +3,6 @@ pushd `dirname $0` > /dev/null
 SCRIPTPATH=`pwd`
 popd > /dev/null
 
+default_command=versions
 
-"$SCRIPTPATH/commands/$1"
+"$SCRIPTPATH/commands/${1:-$default_command}"

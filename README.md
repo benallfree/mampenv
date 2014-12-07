@@ -4,7 +4,7 @@
   * [Key features](#key-features)
   * [How it works](#how-it-works)
 * [Installation](#installation)
-  * [Basic github checkout](#basic-gitHub-checkout) 
+  * [Basic github checkout](#basic-github-checkout) 
   * [Upgrading](#upgrading)
 * [Usage](#usage)
   * [mampenv versions](#mampenv-versions)

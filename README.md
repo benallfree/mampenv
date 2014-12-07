@@ -1,7 +1,7 @@
 # mampenv - PHP multi-version management for MAMP.
 
 * [Overview](#Overivew)
-  * [Key features](#Key-Features)
+  * [Key features](#key-features)
   * [How it works](#How-It-Works)
 * [Installation](#Installation)
   * [Basic github checkout](#Basic-GitHub-Checkout) 

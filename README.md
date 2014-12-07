@@ -1,14 +1,14 @@
 # mampenv - PHP multi-version management for MAMP.
 
 * [Overview](#Overivew)
-  * [Key features](#Key Features)
-  * [How it works](#How It Works)
+  * [Key features](#Key-Features)
+  * [How it works](#How-It-Works)
 * [Installation](#Installation)
-  * [Basic github checkout](#Basic GitHub Checkout) 
+  * [Basic github checkout](#Basic-GitHub-Checkout) 
   * [Upgrading](#Upgrading)
 * [Usage](#Usage)
-  * [mampenv versions](#mampenv versions)
-  * [Anchoring your project to a PHP version](#Anchoring your project to a PHP version)
+  * [mampenv versions](#mampenv-versions)
+  * [Anchoring your project to a PHP version](#Anchoring-your-project-to-a-PHP-version)
 * [Contributing](#Contributing)
 * [License](#License)
 

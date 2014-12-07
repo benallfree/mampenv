@@ -2,15 +2,15 @@
 
 * [Overview](#Overivew)
   * [Key features](#key-features)
-  * [How it works](#How-It-Works)
-* [Installation](#Installation)
-  * [Basic github checkout](#Basic-GitHub-Checkout) 
-  * [Upgrading](#Upgrading)
-* [Usage](#Usage)
+  * [How it works](#how-it-works)
+* [Installation](#installation)
+  * [Basic github checkout](#basic-gitHub-checkout) 
+  * [Upgrading](#upgrading)
+* [Usage](#usage)
   * [mampenv versions](#mampenv-versions)
-  * [Anchoring your project to a PHP version](#Anchoring-your-project-to-a-PHP-version)
-* [Contributing](#Contributing)
-* [License](#License)
+  * [Anchoring your project](#anchoring-your-project)
+* [Contributing](#contributing)
+* [License](#license)
 
 #Overview
 
@@ -89,7 +89,7 @@ List the local MAMP PHP versions installed.
 
     $ mampenv versions
 
-## Anchoring your project to a PHP version
+## Anchoring your project
 
 First, see what versions are available on yoru system. 
 

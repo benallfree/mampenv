@@ -1,12 +1,18 @@
-## mampenv - PHP multi-version management for MAMP.
+# mampenv - PHP multi-version management for MAMP.
 
-### Key features:
+* [Overview](#Overivew)
+  * [Key features](#Key Features)
+  * [How it works](#How It Works)
+* [Installation](#Installation)
+  * [Basic github checkout](#Basic GitHub Checkout) 
+  * [Upgrading](#Upgrading)
+* [Usage](#Usage)
+  * [mampenv versions](#mampenv versions)
+  * [Anchoring your project to a PHP version](#Anchoring your project to a PHP version)
+* [Contributing](#Contributing)
+* [License](#License)
 
- * Inspired by [mampenv](https://github.com/mampenv/mampenv) and [rbenv](https://github.com/sstephenson/rbenv) 
- * Run MAMP-supporeted PHP versions directly from the command line
- * Support for `composer` too
- * Use project-specific versions of MAMP's PHP installations
- * PEAR? PECL? Oh yes, each MAMP version of PHP already has that
+#Overview
 
 mampenv is here to help you make sure that your command line is running the same
 version that your MAMP Pro sites running.
@@ -15,6 +21,14 @@ Simply put a `.phpversion` file in the root of your folder and have the peace
 of mind of knowing that your PHP version on the command line matches the version
 MAMP Pro is running for your site. All from a code repository kept in your local
 `.mampenv` folder.
+
+## Key features:
+
+ * Inspired by [mampenv](https://github.com/mampenv/mampenv) and [rbenv](https://github.com/sstephenson/rbenv) 
+ * Run MAMP-supporeted PHP versions directly from the command line
+ * Support for `composer` too
+ * Use project-specific versions of MAMP's PHP installations
+ * PEAR? PECL? Oh yes, each MAMP version of PHP already has that
 
 ## How It Works
 
@@ -26,9 +40,9 @@ it will use the latest version of PHP supplied with MAMP.
 
 Each MAMP PHP version is a stand-alone installation with its own binaries and configuration.
 
-## Installation
+# Installation
 
-### Basic GitHub Checkout
+## Basic GitHub Checkout
 
 This will get you going with the latest version of mampenv and make it
 easy to fork and contribute any changes back upstream.
@@ -52,9 +66,9 @@ easy to fork and contribute any changes back upstream.
 
         $ source ~/.bash_profile
 
-5. If all goes well, `which php` should indicate a `~/.mampenv/bin/php` path.
+5. If all goes well, `which php` should indicate a `~/.mampenv/bin/php` path. `which composer` should say `~/.mampenv/bin/composer` and `which pear` should say `~/.mampenv/bin/pear`
 
-### Upgrading
+## Upgrading
 
 If you've installed mampenv using the instructions above, you can
 upgrade your installation at any time using git.
@@ -64,18 +78,18 @@ To upgrade to the latest development version of mampenv, use `git pull`:
     $ cd ~/.mampenv
     $ git pull
 
-## Usage
+# Usage
 
 Like `git`, the `mampenv` command delegates to subcommands based on its
 first argument. The most common subcommands are:
 
-### mampenv versions
+## mampenv versions
 
 List the local MAMP PHP versions installed.
 
     $ mampenv versions
 
-## How to Anchor Your Project to a PHP Version
+## Anchoring your project to a PHP version
 
 First, see what versions are available on yoru system. 
 
@@ -90,17 +104,17 @@ Next, navigate to your project directory and create a `.phpversion` file.
 
 Now test the version.
 
-    $ which php
+    $ which php                 <-- Should say ~/.mampenv/bin/php
     $ php --version
 
-## Development
+# Contributing
 
 The mampenv source code is [hosted on
 GitHub](https://github.com/benallfree/mampenv). It's clean, modular,
 and easy to understand, even if you're not a
 shell hacker.
 
-### License
+# License
 
 (The MIT license)
 

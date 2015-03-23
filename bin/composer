@@ -15,7 +15,7 @@ function upsearch () {
 }
 
 
-default="5.5.10"
+default="5.5.18"
 
 value=$(upsearch ".phpversion")
 if [[ -z "$value" ]]; then 

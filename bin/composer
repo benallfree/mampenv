@@ -1,32 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 pushd `dirname $0` > /dev/null
 SCRIPTPATH=`pwd`
 popd > /dev/null
 
-function upsearch () {
-  slashes=${PWD//[^\/]/}
-  directory="$PWD"
-  for (( n=${#slashes}; n>0; --n ))
-  do
-    test -e "$directory/$1" && echo "$directory/$1" && return 
-    directory="$directory/.."
-  done
-}
-
-
-default="5.5.18"
-
-value=$(upsearch ".phpversion")
-if [[ -z "$value" ]]; then 
-  version=$default
-else 
-  version=`cat $value`
-fi
-php="/Applications/MAMP/bin/php/php$version/bin/php"
-if [ -e "$php" ]; then
-  $php "$SCRIPTPATH/composer.phar" $*
-else
-  echo "PHP $version was not found"
-fi
-
+source phpversion.sh
+$php "$SCRIPTPATH/composer.phar" "$@"

@@ -52,21 +52,15 @@ easy to fork and contribute any changes back upstream.
         $ cd
         $ git clone git://github.com/benallfree/mampenv.git .mampenv
 
-2. Add `~/.mampenv/bin` to your `$PATH` for access to the `mampenv`
-   command-line utility.
+2. Add `~/.mampenv/bin` to your `$PATH` for access to the `mampenv` command-line utility.
 
         $ echo 'export PATH="$HOME/.mampenv/bin:$PATH"' >> ~/.bash_profile
 
-3. Add mampenv init to your shell to enable shims and autocompletion.
-
-        $ echo 'eval "$(mampenv init -)"' >> ~/.bash_profile
-
-4. Restart your shell so the path changes take effect. You can now
-   begin using mampenv.
+4. Restart your shell so the path changes take effect. You can now begin using mampenv.
 
         $ source ~/.bash_profile
 
-5. If all goes well, `which php` should indicate a `~/.mampenv/bin/php` path. `which composer` should say `~/.mampenv/bin/composer` and `which pear` should say `~/.mampenv/bin/pear`
+5. If all goes well, `which php` should indicate a `~/.mampenv/bin/php` path. `which composer` should say `~/.mampenv/bin/composer` and `which pecl` should say `~/.mampenv/bin/pecl`
 
 ### Upgrading
 
@@ -105,7 +99,7 @@ Next, navigate to your project directory and create a `.phpversion` file.
 Now test the version.
 
     $ which php                 <-- Should say ~/.mampenv/bin/php
-    $ php --version
+    $ php -v
 
 ## Contributing
 

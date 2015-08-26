@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function upsearch () {
   slashes=${PWD//[^\/]/}
   directory="$PWD"

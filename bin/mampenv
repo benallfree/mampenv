@@ -1,8 +1,6 @@
 #!/bin/bash
-pushd `dirname $0` > /dev/null
-SCRIPTPATH=`pwd`
-popd > /dev/null
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 default_command=versions
 
-"$SCRIPTPATH/commands/${1:-$default_command}"
+"$DIR/commands/${1:-$default_command}"

@@ -1,4 +1,4 @@
-# mampenv - PHP multi-version management for MAMP
+# mampenv - PHP CLI multi-version management for MAMP
 
 * [Overview](#Overivew)
   * [Key features](#key-features)
@@ -15,18 +15,17 @@
 ## Overview
 
 mampenv is here to help you make sure that your command line is running the same
-version that your MAMP Pro sites running.
+version that your MAMP Pro sites are running.
 
-Simply put a `.phpversion` file in the root of your folder and have the peace
-of mind of knowing that your PHP version on the command line matches the version
-MAMP Pro is running for your site. All from a code repository kept in your local
-`.mampenv` folder.
+Put a `.phpversion` file in the root of your folder and have the peace
+of mind of knowing that your PHP CLI version matches the version
+MAMP Pro is running for your site.
 
 ### Key features:
 
  * Inspired by [phpenv](https://github.com/phpenv/phpenv) and [rbenv](https://github.com/sstephenson/rbenv) 
- * Run MAMP-supporeted PHP versions directly from the command line
- * Support for `composer` too
+ * Run MAMP-supported PHP versions directly from the command line
+ * Run `composer` using the correct PHP version
  * Use project-specific versions of MAMP's PHP installations
  * PEAR? PECL? Oh yes, each MAMP version of PHP already has that
 
@@ -49,16 +48,16 @@ easy to fork and contribute any changes back upstream.
 
 1. Check out mampenv into `~/.mampenv`.
 
-        $ cd
-        $ git clone git://github.com/benallfree/mampenv.git .mampenv
+        cd
+        git clone git://github.com/benallfree/mampenv.git .mampenv
 
 2. Add `~/.mampenv/bin` to your `$PATH` for access to the `mampenv` command-line utility.
 
-        $ echo 'export PATH="$HOME/.mampenv/bin:$PATH"' >> ~/.bash_profile
+        echo 'export PATH="$HOME/.mampenv/bin:$PATH"' >> ~/.bash_profile
 
 4. Restart your shell so the path changes take effect. You can now begin using mampenv.
 
-        $ source ~/.bash_profile
+        source ~/.bash_profile
 
 5. If all goes well, `which php` should indicate a `~/.mampenv/bin/php` path. `which composer` should say `~/.mampenv/bin/composer` and `which pecl` should say `~/.mampenv/bin/pecl`
 
@@ -69,8 +68,8 @@ upgrade your installation at any time using git.
 
 To upgrade to the latest development version of mampenv, use `git pull`:
 
-    $ cd ~/.mampenv
-    $ git pull
+    cd ~/.mampenv
+    git pull
 
 ## Usage
 
@@ -81,25 +80,31 @@ first argument. The most common subcommands are:
 
 List the local MAMP PHP versions installed.
 
-    $ mampenv versions
+    mampenv versions
+
+### mampenv init
+
+Create a new `.phpversion` file in the current directory.
+
+    mampenv init 7.1.0
 
 ### Anchoring your project
 
-First, see what versions are available on yoru system. 
+First, see what versions are available on your system. 
 
-    $ mampenv versions
+    mampenv versions
 
 If you don't like any you see, visit the [MAMP Pro Downloads](http://www.mamp.info/en/downloads/) section and download more.
 
 Next, navigate to your project directory and create a `.phpversion` file.
 
-    $ cd ~/my_project
-    $ echo "5.5.10" > .phpversion
+    cd ~/my_project
+    echo "5.5.10" > .phpversion
 
 Now test the version.
 
-    $ which php                 <-- Should say ~/.mampenv/bin/php
-    $ php -v
+    which php                 <-- Should say ~/.mampenv/bin/php
+    php -v
 
 ## Contributing
 

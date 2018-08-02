@@ -5,8 +5,8 @@ function upsearch () {
   directory="$PWD"
   for (( n=${#slashes}; n>0; --n ))
   do
-    test -e "$directory/$1" && echo "$directory/$1" && return 
-    directory="$directory/.."
+    test -e "${directory}"/"$1" && echo "$directory"/"$1" && return 
+    directory="$directory"/..
   done
 }
 
@@ -15,9 +15,9 @@ if [[ -z "$value" ]]; then
   echo "A .phpversion file must be defined. http://github.com/benallfree/mampenv"
   exit 1
 else 
-  version=`cat $value`
+  version=$(cat "${value}")
 fi
-php="/Applications/MAMP/bin/php/php$version/bin/php"
+php="/Applications/MAMP/bin/php/php${version}/bin/php"
 
 if [ ! -e "$php" ]; then
   echo "PHP $version specified in .phpversion was not found ($php). http://github.com/benallfree/mampenv"
